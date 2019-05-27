@@ -1,0 +1,49 @@
+@font-face {
+  font-family: 'Raleway';
+  src:  url('#{$font-path}RalewayThin/RalewayThin.eot?#iefix') format('embedded-opentype'),  
+  		  url('#{$font-path}RalewayThin/RalewayThin.woff') format('woff'), 
+  		  url('#{$font-path}RalewayThin/RalewayThin.ttf')  format('truetype');
+  font-weight: 100;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Raleway';
+  src:  url('#{$font-path}RalewayLight/RalewayLight.eot?#iefix') format('embedded-opentype'),  
+        url('#{$font-path}RalewayLight/RalewayLight.woff') format('woff'), 
+        url('#{$font-path}RalewayLight/RalewayLight.ttf')  format('truetype');
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Raleway';
+  src:  url('#{$font-path}RalewayRegular/RalewayRegular.eot?#iefix') format('embedded-opentype'),  
+        url('#{$font-path}RalewayRegular/RalewayRegular.woff') format('woff'), 
+        url('#{$font-path}RalewayRegular/RalewayRegular.ttf')  format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Raleway';
+  src:  url('#{$font-path}RalewayBold/RalewayBold.eot?#iefix') format('embedded-opentype'),  
+        url('#{$font-path}RalewayBold/RalewayBold.woff') format('woff'), 
+        url('#{$font-path}RalewayBold/RalewayBold.ttf')  format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Raleway';
+  src:  url('#{$font-path}RalewayExtraBold/RalewayExtraBold.eot?#iefix') format('embedded-opentype'),  
+        url('#{$font-path}RalewayExtraBold/RalewayExtraBold.woff') format('woff'), 
+        url('#{$font-path}RalewayExtraBold/RalewayExtraBold.ttf')  format('truetype');
+  font-weight: 900;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Fira Sans';
+  src:  url('#{$font-path}FiraSansRegular/FiraSansRegular.eot?#iefix') format('embedded-opentype'),  
+        url('#{$font-path}FiraSansRegular/FiraSansRegular.woff') format('woff'), 
+        url('#{$font-path}FiraSansRegular/FiraSansRegular.ttf')  format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face { font-family: 'FontAwesome'; src: url('#{$font-path}fontawesome/fontawesome-webfont.eot?#iefix') format('embedded-opentype'), url('#{$font-path}fontawesome/fontawesome-webfont.woff') format('woff'), url('#{$font-path}fontawesome/fontawesome-webfont.ttf') format('truetype'), url('#{$font-path}fontawesome/fontawesome-webfont.svg#FontAwesome') format('svg'); font-weight: normal; font-style: normal; }

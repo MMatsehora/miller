@@ -1,0 +1,54 @@
+$font-path: '../fonts/';
+$font: 'Raleway', sans-serif;
+$font2: 'Fira Sans', sans-serif;
+$light_orange: #F9C869;
+$light_red: #F86868;
+$biruza: #66C7CD;
+$davy_gray: #555555;
+$dark: #1a1a1a;
+$dim_gray: #2C2C2C;
+@mixin content-welcome(){
+	content: '';
+	position: absolute;
+	width: 10.6rem;
+	height: 1px;
+	background: white;
+	top: 50%;
+}
+@mixin content-city(){
+	content: '\f005';
+	position: absolute;
+	font-family: FontAwesome;
+	font-size: 1.2rem;
+	top: 0.4rem;
+	color: $davy_gray;
+}
+@mixin block-btn(){
+	transition: background-color .2s ease;
+	position: absolute;
+	content: '';
+	height: 4px;
+	bottom: 0;
+	width: 100%;
+	opacity: .18;
+	border-bottom-left-radius: 2px;
+	border-bottom-right-radius: 2px;
+	left: 0;
+}
+@mixin awesome(){
+	&:before{
+		position: absolute;
+		font-family: FontAwesome;
+	}
+}
+@mixin block-phone(){
+	position: relative;
+	color: white;
+	&:before{
+		content: '\f10b';
+		position: absolute;
+		font-family: FontAwesome;
+		left: 2px;
+		color: $davy_gray;
+	}
+}

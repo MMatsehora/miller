@@ -1,0 +1,226 @@
+@import 'reset.scss';
+@import 'variable.scss';
+@import 'fonts.scss';
+html{
+	font-size: 62.5%;
+	line-height: 1.5;
+}
+.main-wrapper{
+	position: relative;
+	margin: 0 auto;
+	overflow: hidden;
+	font: 400 1.6rem/1.75 $font;
+	color: white;
+}
+.container{
+	max-width: 120rem;
+	width: 100%;
+	margin: 0 auto;
+	padding: 0 3rem;
+	box-sizing: border-box;
+}
+.block-header{
+	display: flex;
+	background: url(/img/top-bg.jpg) center no-repeat;
+	background-size: cover;
+	background-color: $dark;
+	min-height: 97.9rem;
+}
+.top-header{
+	display: flex;
+	justify-content: space-between;
+	&__phone{
+		@include block-phone();
+		padding: 0 2.6rem 0 2rem;
+		font: 2.2rem $font2;
+		color: white;
+		&:before{
+			top: 1px;
+		}
+	}
+	&__logo{
+		padding-left: 4.5rem;
+	}
+}
+.coloumn-left{
+	width: 100%;
+	padding-top: 4.4rem;
+	border-right: 1px solid rgba(255, 255, 255, 0.2);
+}
+.coloumn-right{
+	padding-top: 4.4rem;
+	width: 6.5rem;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.content-coloumn{
+	text-align: center;
+	width: 56.6rem;
+	max-width: 100%;
+	margin-top: 21.5rem;
+	&__h1{
+		padding: 0.8rem 0 1.9rem;
+		font: 100 6.7rem $font;
+		text-transform: uppercase;
+		border-bottom: 1px solid white;
+	}
+	&__welcome{
+		position: relative;
+		font-size: 1.4rem;
+		text-transform: uppercase;
+		&:before{
+			@include content-welcome();
+			left: 0;
+		}
+		&:after{
+			@include content-welcome();
+			right: 0;
+		}
+	}
+	&__city{
+		position: relative;
+		font-size: 1.8rem;
+		width: 13.7rem;
+		margin: 2.7rem auto 4.4rem; 
+		text-transform: uppercase;
+		&:before{
+			@include content-city();
+			left: 0;
+		}
+		&:after{
+			@include content-city();
+			right: 0;
+		}
+	}
+	&__btn{
+		background-color: $light_orange;
+	}
+}
+.block-btn{
+	display: inline-block;
+	text-decoration: none;
+	padding: 1.5rem 4.5rem;
+	font-size: 1.3rem;
+	text-transform: uppercase;
+	letter-spacing: .3rem;
+	border-radius: .2rem;
+	text-align: center;
+	margin-top: 3rem;
+	position: relative;
+	outline: none;
+	transition: background-color .1s ease;
+	cursor: pointer;
+	&::after, &::before{
+		@include block-btn();
+		background-color: darken($light_orange, 50%);
+	}
+	&:focus, &:hover{
+		text-decoration: none;
+		color: #fff;
+	}
+}
+.wrapper-circle{
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+}
+.block-circle{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 3.8rem;
+	height: 3.8rem;
+	border-radius: 50%;
+	background: rgba(255, 255, 255, 0.2);
+	margin-bottom: 1.5rem;
+	&__img{
+		color: $dim_gray;
+	}
+}
+.header-bottom{
+	position: relative;
+	padding: 1rem 0 ;
+	margin-top: 24.3rem;
+	.container{
+		display: flex;
+		justify-content: space-between;
+	}
+	&__phone{
+		font-family: $font2;
+		padding-left: 2rem;
+		@include block-phone();
+		&:before{
+			top: 0;
+		}
+	}
+	&__text{
+		@include awesome();
+		position: relative;
+		padding-left: 2rem;
+		&:before{
+			content: '\f017';
+			color: $davy_gray;
+			left: 0;
+		}
+	}
+	&:before{
+		content: '';
+		position: absolute;
+		width: 100vw;
+		border-top: .1rem solid rgba(255, 255, 255, 0.2);
+		top: 0;
+	}
+}
+.wrapper-services{
+	display: flex;
+	flex-wrap: wrap;
+}
+.block-service{
+	width: 33.33%;
+	text-align: center;
+	max-height: 47.2rem;
+	&__photo img{
+		width: 100%;
+	}
+	&__caption{
+		font: 900 3rem $font;
+		text-transform: uppercase;
+		margin: 0.2rem 0 0.6rem;
+	}
+	&__list{
+		margin-top: 1.6rem;
+		li{
+			font: 300 1.8rem $font;
+			padding: 1.7rem 0 2rem;
+			border-bottom: 1px solid rgba(0, 0, 0, .1);
+			span{
+				font-weight: bold;
+			}		
+		}
+	} 
+	&__service{
+		font: 300 1.8rem $font;
+		text-transform: uppercase;
+	}
+	&:nth-child(2n-1){
+		padding: 6rem 7rem 4.4rem 7rem;
+		box-sizing: border-box;
+	}
+	&__btn{
+		background-color: white;
+		color: $davy_gray;
+		&:before, &:after{
+			background-color: darken(white, 30%);
+		}
+	}
+}
+.block-service_biruza{
+	background: $biruza;
+}
+.block-service_red{
+	background: $light_red;
+}
+.block-service_orange{
+	background: $light_orange;
+}
