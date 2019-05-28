@@ -9,7 +9,7 @@ html{
 	position: relative;
 	margin: 0 auto;
 	overflow: hidden;
-	font: 400 1.6rem/1.75 $font;
+	font: 100 1.6rem/1.7 $font;
 	color: white;
 }
 .container{
@@ -18,6 +18,15 @@ html{
 	margin: 0 auto;
 	padding: 0 3rem;
 	box-sizing: border-box;
+}
+.content-h2{
+	font: 30px $font;
+	font-weight: 900;
+	text-transform: uppercase;
+	margin-bottom: 3.5rem;
+	span{
+		color: $light_orange;
+	} 
 }
 .block-header{
 	display: flex;
@@ -32,7 +41,7 @@ html{
 	&__phone{
 		@include block-phone();
 		padding: 0 2.6rem 0 2rem;
-		font: 2.2rem $font2;
+		font: 100 2.2rem $font2;
 		color: white;
 		&:before{
 			top: 1px;
@@ -223,4 +232,79 @@ html{
 }
 .block-service_orange{
 	background: $light_orange;
+}
+.wrapper-salon{
+	position: relative;
+	background: url(/img/img_back.jpg) center no-repeat;
+	background-size: cover;
+	min-height: 68rem;
+	box-sizing: border-box;
+	padding: 12.6rem 0;
+	&:before{
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		background: rgba(61,60,60,.9);
+		z-index: 2;
+	}
+	&__inner{
+		position: relative;
+		z-index: 3;
+	}
+}
+.block-salon{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.salon-left{
+	width: 44.3rem;
+	font-size: 1.8rem;
+	&__p{
+		margin-bottom: 2.7rem;
+	}
+}
+.salon-right{
+	position: relative;
+}
+.salon-right__bottom{
+	position: absolute;
+	display: flex;
+	justify-content: space-between;
+	width: 60.5rem;
+	left: 50%;
+	bottom: 3rem;
+	transform: translate(-50%, 0);
+	.bottom-img{
+		position: relative;
+		width: 11.3rem;
+		height: 7rem;
+		&:before{
+			content: '';
+			position: absolute;
+			border: .4rem solid white;
+			width: 100%;
+			box-sizing: border-box;
+			height: 100%;
+		}
+	}
+}
+.wrapper-request{
+	position: relative;
+	background: url(/img/back_img4.jpg) center no-repeat;
+	background-size: cover;
+	min-height: 65.1rem;
+	&:before{
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 50%;
+		right: 0;
+		bottom: 0;
+		background: rgba(249,200,105,.9);
+		z-index: 2;
+	}
 }
