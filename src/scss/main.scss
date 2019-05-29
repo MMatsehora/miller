@@ -63,6 +63,10 @@ html{
 	align-items: center;
 	justify-content: center;
 }
+.block-inner{
+	position: relative;
+	z-index: 3;
+}
 .content-coloumn{
 	text-align: center;
 	width: 56.6rem;
@@ -117,16 +121,11 @@ html{
 	text-align: center;
 	margin-top: 3rem;
 	position: relative;
-	outline: none;
 	transition: background-color .1s ease;
 	cursor: pointer;
 	&::after, &::before{
 		@include block-btn();
 		background-color: darken($light_orange, 50%);
-	}
-	&:focus, &:hover{
-		text-decoration: none;
-		color: #fff;
 	}
 }
 .wrapper-circle{
@@ -217,21 +216,12 @@ html{
 		box-sizing: border-box;
 	}
 	&__btn{
-		background-color: white;
-		color: $davy_gray;
-		&:before, &:after{
-			background-color: darken(white, 30%);
-		}
+		@include white-btn();
 	}
 }
-.block-service_biruza{
-	background: $biruza;
-}
-.block-service_red{
-	background: $light_red;
-}
-.block-service_orange{
-	background: $light_orange;
+.blockinner{
+	position: relative;
+	z-index: 3;
 }
 .wrapper-salon{
 	position: relative;
@@ -241,18 +231,7 @@ html{
 	box-sizing: border-box;
 	padding: 12.6rem 0;
 	&:before{
-		content: '';
-		position: absolute;
-		top: 0;
-		left: 0;
-		right: 0;
-		bottom: 0;
-		background: rgba(61,60,60,.9);
-		z-index: 2;
-	}
-	&__inner{
-		position: relative;
-		z-index: 3;
+		@include blackout();
 	}
 }
 .block-salon{
@@ -298,13 +277,58 @@ html{
 	background-size: cover;
 	min-height: 65.1rem;
 	&:before{
-		content: '';
-		position: absolute;
-		top: 0;
+		@include blackout();
 		left: 50%;
-		right: 0;
-		bottom: 0;
 		background: rgba(249,200,105,.9);
-		z-index: 2;
+	}
+}
+.block-left{
+	position: relative;
+	width: 50%;
+	margin-left: auto;
+}
+.block-form{
+	padding: 9.3rem 0 0 11.3rem;
+	&__input{
+		border: .1rem solid #E0B660;
+		border-bottom: .2rem solid #E0B660;
+		padding-left: 2.5rem;
+		box-sizing: border-box;
+		background: none;
+		width: 45.8rem;
+		height: 4.8rem;
+		margin-bottom: 1.8rem;
+		color: white;
+		font: 100 1.6rem $font;
+		&::placeholder{
+			color: white;
+			font-weight: 100;
+			font-size: 1.6rem;
+			opacity: 1;
+		}
+	}
+	&__p{
+		margin-bottom: 3.2rem;
+	}
+	.content-h2{
+		margin-bottom: .8rem;
+	}
+	select{
+		padding-left: 2.1rem;
+		color: white;
+		font: 100 1.6rem $font;
+		opacity: 1;
+	}
+	&__btn{
+		@include white-btn();
+	}
+}
+.wrapper-reviews{
+	position: relative;
+	background: url(/img/img_back2.jpg) center no-repeat;
+	background-size: cover;
+	min-height: 720px;
+	&:before{
+		@include blackout();
 	}
 }

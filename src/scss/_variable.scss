@@ -7,6 +7,15 @@ $biruza: #66C7CD;
 $davy_gray: #555555;
 $dark: #1a1a1a;
 $dim_gray: #2C2C2C;
+.block-service_biruza{
+	background: $biruza;
+}
+.block-service_red{
+	background: $light_red;
+}
+.block-service_orange{
+	background: $light_orange;
+}
 @mixin content-welcome(){
 	content: '';
 	position: absolute;
@@ -51,4 +60,21 @@ $dim_gray: #2C2C2C;
 		left: 2px;
 		color: $davy_gray;
 	}
+}
+@mixin white-btn(){
+	background-color: white;
+	color: #444;
+	&:before, &:after{
+		background-color: darken(white, 40%);
+	}
+}
+@mixin blackout(){
+	content: '';
+	position: absolute;
+	background: rgba(61,60,60,.9);
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	z-index: 2;
 }
